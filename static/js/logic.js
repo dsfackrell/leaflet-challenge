@@ -5,8 +5,10 @@ let queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_mo
 d3.json(queryUrl).then(function(data){
 
     let featureList = data.features
-    let myMap = createMap(featureList)    
+    let myMap = createMap(featureList)
 });
+
+
 
 //create the markers
 function createMarkers(feature) {
@@ -86,3 +88,5 @@ function createMap(data) {
 
     return myMap
 }
+
+
